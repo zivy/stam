@@ -1,0 +1,25 @@
+name: Website Links Checker
+
+on:
+  # Enable manual running of workflow, so we can force execution
+  workflow_dispatch:
+  schedule:
+  # Run testing on the first of each month 5am ET / 9am UTC 
+  - cron: '0 9 1 * *'
+
+jobs:
+  check-links:
+    # Action is only supported on linux
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ruzickap/action-my-broken-link-checker@v2
+      with:
+          # Command line parameters for muffet (https://github.com/raviqqe/muffet). muffet is the program
+          # does the work:
+          #   buffer-size: HTTP response buffer size in bytes, default if not specified is 4096.
+          #   timeout: Timeout for HTTP requests in seconds, default if not specified is 10.
+          #   max-connections: Maximum number of HTTP connections, default if not specified is 512.
+          #   rate-limit: Max requests per second.
+          #"--buffer-size=16384 --color=always --timeout=20 --max-connections=10 --verbose"
+          url: https://ibeximagingcommunity.github.io/ibex_imaging_knowledge_base/
+          cmd_params: "--buffer-size=16384 --color=always --timeout=20"
