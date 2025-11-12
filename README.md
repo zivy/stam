@@ -47,21 +47,24 @@ found in `C:\Users\[your_user_name]\.jupyter\custom\custom.css`.
 
 # Kicking the Tires
 
-Before you clone the repository to your computer you may want to try it out, kick the tires so to speak.
+Before you clone the repository to your computer you may want to try it out, kick the tires so to speak. You can try out the Python notebooks without installing a thing on your computer.
 
-Thanks to the awesome people from the [BinderHub Project](https://github.com/jupyterhub/binderhub)
-you can try out the Python notebooks without installing a thing.
+We support two paths that enable this. The first uses [BinderHub](https://github.com/jupyterhub/binderhub) (binder). The second uses [Google Colaboratory](https://colab.google/) (colab).
+
+|[![BinderHub](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/InsightSoftwareConsortium/SimpleITK-Notebooks/main)| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/InsightSoftwareConsortium/SimpleITK-Notebooks/blob/main/google_colab_setup.ipynb)|
+|:-:|:-:|
+|After launching binder, go to the Python directory and select the notebook of interest.| After launching colab, run the entrypoint notebook and then open your notebook of interest |
+
 
 Some caveats:
 
-1. This is a free public service with limited resources, so may not always be available.
-2. Some of our notebooks require significant computational
-   resources which may not be available.
-3. All cells that use the sitk.Show() command will generate an exception because they require a Fiji installation. Either ignore this or modify the code for the session.
+1. Some of the notebooks require significant computational resources which may not be available from these services.
+2. All cells that use the sitk.Show() command will generate an exception because they require a [Fiji](https://imagej.net/software/fiji/) installation. Either ignore this or modify the code for the session.
+3. Binder is a free public service, no login required, with limited resources. As a result it may not always be available.
+4. Colab is a free Google service that requires login.
 
-After you launch binder, go to the Python directory and select the notebook of interest:
 
-[![BinderHub](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/InsightSoftwareConsortium/SimpleITK-Notebooks/main)
+
 
 # Contributions from the Community
 
